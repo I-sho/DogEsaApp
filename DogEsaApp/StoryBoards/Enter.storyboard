@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Enter View Controller-->
+        <scene sceneID="xWt-nt-yVq">
+            <objects>
+                <viewController storyboardIdentifier="EnterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z04-2i-mVw" customClass="EnterViewController" customModule="DogEsaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q7f-ZO-pvX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WNI-Pb-ayq">
+                                <rect key="frame" x="0.0" y="0.0" width="340" height="44"/>
+                                <items>
+                                    <navigationItem title="犬の情報を入力してください" id="NLr-LZ-Hii"/>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0Ii-13-Xar">
+                                <rect key="frame" x="10" y="74" width="320" height="258"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8Tj-4l-fKS">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="犬の名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUJ-2N-Ruo">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="IW9-fC-AMC"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VmM-JQ-wtW">
+                                                <rect key="frame" x="0.0" y="20" width="320" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="xTd-jK-4C6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                                <connections>
+                                                    <action selector="tappedReturn:" destination="z04-2i-mVw" eventType="editingDidEndOnExit" id="PBX-I3-e5b"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ecm-2R-YeN">
+                                        <rect key="frame" x="0.0" y="90" width="320" height="168"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="エサやりの時間" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMh-MT-2J8">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sjG-E3-ya2">
+                                                <rect key="frame" x="0.0" y="18" width="320" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="Pko-Jt-eIU"/>
+                                                    <constraint firstAttribute="width" constant="200" id="wyb-Pa-za7"/>
+                                                </constraints>
+                                            </pickerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="sjG-E3-ya2" firstAttribute="centerX" secondItem="ecm-2R-YeN" secondAttribute="centerX" id="fF1-NQ-OjC"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAF-XL-6Wa">
+                                <rect key="frame" x="90" y="402" width="160" height="40"/>
+                                <color key="backgroundColor" red="0.79607843140000001" green="0.80784313730000001" blue="0.82745098039999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="T25-6y-IpE"/>
+                                    <constraint firstAttribute="height" constant="40" id="avo-aF-cRv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="決定">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedKetteiButton:" destination="z04-2i-mVw" eventType="touchUpInside" id="uHX-S7-JDH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="犬の名前は1~5文字です" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERL-UH-eRD">
+                                <rect key="frame" x="109" y="450" width="122" height="13.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ERL-UH-eRD" firstAttribute="top" secondItem="cAF-XL-6Wa" secondAttribute="bottom" constant="8" id="7DO-qS-Vm1"/>
+                            <constraint firstItem="ERL-UH-eRD" firstAttribute="centerX" secondItem="q7f-ZO-pvX" secondAttribute="centerX" id="BAz-ca-LKw"/>
+                            <constraint firstItem="WNI-Pb-ayq" firstAttribute="trailing" secondItem="shf-OG-CNt" secondAttribute="trailing" id="EhA-kv-ier"/>
+                            <constraint firstItem="shf-OG-CNt" firstAttribute="trailing" secondItem="0Ii-13-Xar" secondAttribute="trailing" constant="10" id="IPK-gd-hkF"/>
+                            <constraint firstItem="cAF-XL-6Wa" firstAttribute="top" secondItem="0Ii-13-Xar" secondAttribute="bottom" constant="70" id="OmP-hO-qd2"/>
+                            <constraint firstItem="WNI-Pb-ayq" firstAttribute="top" secondItem="shf-OG-CNt" secondAttribute="top" id="bIV-o5-joE"/>
+                            <constraint firstItem="0Ii-13-Xar" firstAttribute="leading" secondItem="shf-OG-CNt" secondAttribute="leading" constant="10" id="bJg-YI-nSU"/>
+                            <constraint firstItem="0Ii-13-Xar" firstAttribute="top" secondItem="WNI-Pb-ayq" secondAttribute="bottom" constant="30" id="fMB-uw-X4b"/>
+                            <constraint firstItem="cAF-XL-6Wa" firstAttribute="centerX" secondItem="q7f-ZO-pvX" secondAttribute="centerX" id="sBv-ZY-dV5"/>
+                            <constraint firstItem="WNI-Pb-ayq" firstAttribute="leading" secondItem="shf-OG-CNt" secondAttribute="leading" id="sgA-tA-gRJ"/>
+                            <constraint firstItem="0Ii-13-Xar" firstAttribute="centerX" secondItem="q7f-ZO-pvX" secondAttribute="centerX" id="vVq-WP-BFU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="shf-OG-CNt"/>
+                    </view>
+                    <connections>
+                        <outlet property="errLabel" destination="ERL-UH-eRD" id="EJk-1D-Z8E"/>
+                        <outlet property="esaLabel" destination="NMh-MT-2J8" id="Sa2-T4-6dy"/>
+                        <outlet property="ketteiButton" destination="cAF-XL-6Wa" id="muu-0b-WUn"/>
+                        <outlet property="nameTextField" destination="VmM-JQ-wtW" id="pfu-IQ-DoX"/>
+                        <outlet property="timePickerView" destination="sjG-E3-ya2" id="NEF-85-90E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8S5-OY-6wS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10" y="-1916"/>
+        </scene>
+    </scenes>
+</document>

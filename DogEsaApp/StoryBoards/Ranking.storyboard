@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ranking View Controller-->
+        <scene sceneID="OY7-Lb-NRE">
+            <objects>
+                <viewController storyboardIdentifier="RankingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cya-h2-sz3" customClass="RankingViewController" customModule="DogEsaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lC5-AZ-mGb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FIg-DN-eOQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="ランキング" id="ilO-x7-DYz"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XjC-Jj-gSF">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="cellId" rowHeight="118" id="MUV-i0-ccI" customClass="RankingCell" customModule="DogEsaApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="118"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MUV-i0-ccI" id="ePx-eP-gQW">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="118"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1位" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EG-QL-zxx">
+                                                    <rect key="frame" x="8" y="47" width="30.5" height="24"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="太郎さん" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9A-UU-coE">
+                                                    <rect key="frame" x="48.5" y="49" width="69.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10回" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJP-4c-xfd">
+                                                    <rect key="frame" x="355" y="47" width="44" height="24"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Z9A-UU-coE" firstAttribute="leading" secondItem="9EG-QL-zxx" secondAttribute="trailing" constant="10" id="0S6-2U-L28"/>
+                                                <constraint firstAttribute="trailing" secondItem="AJP-4c-xfd" secondAttribute="trailing" constant="15" id="AeF-Cq-hh4"/>
+                                                <constraint firstItem="9EG-QL-zxx" firstAttribute="centerY" secondItem="ePx-eP-gQW" secondAttribute="centerY" id="JOA-ni-yuo"/>
+                                                <constraint firstItem="AJP-4c-xfd" firstAttribute="centerY" secondItem="ePx-eP-gQW" secondAttribute="centerY" id="NVP-VK-AZz"/>
+                                                <constraint firstItem="9EG-QL-zxx" firstAttribute="leading" secondItem="ePx-eP-gQW" secondAttribute="leading" constant="8" id="Uu6-GC-KuL"/>
+                                                <constraint firstItem="AJP-4c-xfd" firstAttribute="centerY" secondItem="ePx-eP-gQW" secondAttribute="centerY" id="VXd-Gt-ov7"/>
+                                                <constraint firstItem="Z9A-UU-coE" firstAttribute="centerY" secondItem="ePx-eP-gQW" secondAttribute="centerY" id="YRN-1a-Z2u"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="kaisuuLabel" destination="AJP-4c-xfd" id="Mze-wt-jiL"/>
+                                            <outlet property="nameLabel" destination="Z9A-UU-coE" id="0bQ-Og-LBo"/>
+                                            <outlet property="rankLabel" destination="9EG-QL-zxx" id="WFk-1B-TSW"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XjC-Jj-gSF" firstAttribute="leading" secondItem="o5B-hq-aHU" secondAttribute="leading" id="LLg-Yk-vog"/>
+                            <constraint firstItem="o5B-hq-aHU" firstAttribute="bottom" secondItem="XjC-Jj-gSF" secondAttribute="bottom" id="QPa-4P-BcL"/>
+                            <constraint firstItem="XjC-Jj-gSF" firstAttribute="top" secondItem="FIg-DN-eOQ" secondAttribute="bottom" id="XcB-Xo-vnQ"/>
+                            <constraint firstItem="FIg-DN-eOQ" firstAttribute="top" secondItem="lC5-AZ-mGb" secondAttribute="topMargin" id="i1v-hA-7Kw"/>
+                            <constraint firstItem="FIg-DN-eOQ" firstAttribute="leading" secondItem="o5B-hq-aHU" secondAttribute="leading" id="jQY-TE-ZdI"/>
+                            <constraint firstItem="FIg-DN-eOQ" firstAttribute="trailing" secondItem="o5B-hq-aHU" secondAttribute="trailing" id="l25-37-2HB"/>
+                            <constraint firstItem="o5B-hq-aHU" firstAttribute="trailing" secondItem="XjC-Jj-gSF" secondAttribute="trailing" id="vFc-SU-Cjb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="o5B-hq-aHU"/>
+                    </view>
+                    <connections>
+                        <outlet property="rankingTableView" destination="XjC-Jj-gSF" id="9oV-Ui-Uuz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n99-EJ-WEQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="195.6521739130435" y="-46.205357142857139"/>
+        </scene>
+    </scenes>
+</document>

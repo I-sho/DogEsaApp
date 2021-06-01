@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="z4Q-IQ-dyf">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="X0U-Ga-4RT" customClass="ProfileViewController" customModule="DogEsaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ueD-nI-MtD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wmU-rU-gUe">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="プロフィール" id="Ul7-VG-Bxz"/>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FtJ-J0-eUd">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="cellId" rowHeight="128" id="JAD-Q3-uxt" customClass="ProfileTableViewCell" customModule="DogEsaApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="128"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JAD-Q3-uxt" id="fgy-pz-fti">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZdC-oW-ICr">
+                                                    <rect key="frame" x="10" y="3" width="31" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ポチ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DE3-LO-ggS">
+                                                    <rect key="frame" x="10" y="62" width="35" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DE3-LO-ggS" firstAttribute="leading" secondItem="fgy-pz-fti" secondAttribute="leading" constant="10" id="EsU-Md-mjt"/>
+                                                <constraint firstItem="ZdC-oW-ICr" firstAttribute="top" secondItem="fgy-pz-fti" secondAttribute="top" constant="3" id="Gil-UL-VY9"/>
+                                                <constraint firstItem="DE3-LO-ggS" firstAttribute="centerY" secondItem="fgy-pz-fti" secondAttribute="centerY" constant="8" id="ofg-B2-hsf"/>
+                                                <constraint firstItem="ZdC-oW-ICr" firstAttribute="leading" secondItem="fgy-pz-fti" secondAttribute="leading" constant="10" id="yhN-e8-vOG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="content" destination="DE3-LO-ggS" id="DUO-GI-lH7"/>
+                                            <outlet property="label" destination="ZdC-oW-ICr" id="8Dq-LT-GJl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FtJ-J0-eUd" firstAttribute="leading" secondItem="mFK-KK-40m" secondAttribute="leading" id="3kn-zN-ro2"/>
+                            <constraint firstItem="mFK-KK-40m" firstAttribute="trailing" secondItem="FtJ-J0-eUd" secondAttribute="trailing" id="5Kf-d7-9W9"/>
+                            <constraint firstItem="mFK-KK-40m" firstAttribute="bottom" secondItem="FtJ-J0-eUd" secondAttribute="bottom" id="Gzw-TT-Sjr"/>
+                            <constraint firstItem="wmU-rU-gUe" firstAttribute="top" secondItem="ueD-nI-MtD" secondAttribute="topMargin" id="YiC-ji-KtQ"/>
+                            <constraint firstItem="wmU-rU-gUe" firstAttribute="trailing" secondItem="FtJ-J0-eUd" secondAttribute="trailing" id="dS1-oy-BKR"/>
+                            <constraint firstItem="wmU-rU-gUe" firstAttribute="leading" secondItem="FtJ-J0-eUd" secondAttribute="leading" id="iWn-75-3hM"/>
+                            <constraint firstItem="FtJ-J0-eUd" firstAttribute="top" secondItem="wmU-rU-gUe" secondAttribute="bottom" id="tP9-fb-gBU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mFK-KK-40m"/>
+                    </view>
+                    <connections>
+                        <outlet property="profileTableView" destination="FtJ-J0-eUd" id="FaG-W5-jtV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="53m-lk-Hdf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1981" y="-703"/>
+        </scene>
+    </scenes>
+</document>
